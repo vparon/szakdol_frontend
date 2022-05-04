@@ -18,11 +18,13 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
+import { GalleryComponent } from './auth/components/gallery/gallery.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     InvoiceComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
