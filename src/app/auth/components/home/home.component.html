@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Kt-Kurier</title>
+  <title>Számlázó</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -13,18 +13,24 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/home">KT-KURIER</a>
+      <a class="navbar-brand" href="/home">(A logó helye)</a>
     </div>
     <div class="navbar-header">
       <a class="navbar-brand" href="/home">Home</a>
     </div>
     <div class="navbar-header">
-      <a class="navbar-brand" href="/home">Gallery</a>
+      <a class="navbar-brand" href="/gallery">Gallery</a>
     </div>
     <div class="navbar-header">
-      <a class="navbar-brand" href="/home">Contact</a>
+      <a class="navbar-brand" href="/contact">Contact</a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
+    <div class="navbar-header" *ngIf = 'this.login.isLoggedIn'>
+      <a class="navbar-brand" href="/invoice">Make an invoice</a>
+    </div>
+    <div class="navbar-header" *ngIf = 'this.login.isLoggedIn'>
+      <button class = 'btn btn-outline-info' (click) = 'this.login.logout()'>Log-out</button>
+    </div>
+    <ul class="nav navbar-nav navbar-right"  *ngIf = '!this.login.isLoggedIn'>
       <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>

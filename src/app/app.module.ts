@@ -19,12 +19,14 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
 import { GalleryComponent } from './auth/components/gallery/gallery.component';
+import { ContactComponent } from './auth/components/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     InvoiceComponent,
     GalleryComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
